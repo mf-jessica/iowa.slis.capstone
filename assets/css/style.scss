@@ -1,0 +1,11 @@
+---
+---
+// 1. MIDNIGHT LUXURY VARIABLES
+$header-bg-color: #0d0d0d;            // Solid rich black
+$header-bg-color-secondary: #c5a059;  // Elegant metallic gold
+
+$section-headings-color: #111111;     // Crisp off-black for portfolio headings
+$brand-color: #b38f4d;             // Slightly deeper gold for links and buttons
+
+// 2. IMPORT CAYMAN
+@import "{{ site.theme }}";
