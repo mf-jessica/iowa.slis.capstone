@@ -9,3 +9,24 @@ $brand-color: #b38f4d;             // Slightly deeper gold for links and buttons
 
 // 2. IMPORT CAYMAN
 @import "{{ site.theme }}";
+
+// 3. NAV BAR STYLE
+.portfolio-nav {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    border-bottom: 2px solid #e1e4e8;
+    margin-bottom: 2rem;
+}
+
+.portfolio-nav a {
+    text-decoration: none;
+    color: #0366d6;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.portfolio-nav a:hover {
+    color: #024ea4;
+    text-decoration: underline;
+}
