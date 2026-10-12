@@ -8,4 +8,4 @@ $section-headings-color: #111111;     // Crisp off-black for portfolio headings
 $brand-color: #b38f4d;             // Slightly deeper gold for links and buttons
 
 // 2. IMPORT CAYMAN
-@import 'jekyll-theme-cayman';
+@import "{{ site.theme }}";
