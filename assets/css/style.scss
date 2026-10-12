@@ -11,22 +11,46 @@ $brand-color: #b38f4d;             // Slightly deeper gold for links and buttons
 @import "{{ site.theme }}";
 
 // 3. NAV BAR STYLE
+
+ /* CENTERS AND STYLES THE NAVIGATION WRAPPER */
 .portfolio-nav {
     display: flex;
-    gap: 1.5rem;
-    padding: 1rem 0;
-    border-bottom: 2px solid #e1e4e8;
-    margin-bottom: 2rem;
+    flex-wrap: wrap;            /* Allows links to drop smoothly to a new line on smaller screens */
+    justify-content: center;    /* Centers the entire group horizontally */
+    align-items: stretch;       /* Ensures all link boxes are the exact same height */
+    gap: 12px;                  /* Clean, uniform spacing between items */
+    margin: 30px auto;          /* Generous spacing above and below the menu */
+    padding: 10px;
+    max-width: 1000px;          /* Matches standard modern site content widths */
 }
 
+/* MAKES EACH LINK LOOK LIKE A UNIFORM BUTTON */
 .portfolio-nav a {
+    display: flex;
+    flex-direction: column;     /* Stacks the numbers perfectly above the text */
+    justify-content: center;
+    align-items: center;
+    text-align: center;         /* Centers multi-line text */
     text-decoration: none;
-    color: #0366d6;
+    
+    // Sizing fixes for uneven words
+    flex: 1 1 120px;            
+    max-width: 150px;           
+    padding: 12px 8px;
+    
+    color: #1a1a1a !important;   /* Matches charcoal text */
+    font-size: 0.9rem;
     font-weight: 500;
-    transition: color 0.2s ease;
+    background-color: #f8f9fa;  /* Subtle grey background block */
+    border: 1px solid #e1e4e8;  /* Soft crisp border line */
+    border-radius: 6px;         /* Sleek modern rounded edges */
+    transition: all 0.2s ease-in-out;
 }
 
 .portfolio-nav a:hover {
-    color: #024ea4;
-    text-decoration: underline;
+    background-color: #1a1a1a;  /* Switches background to rich black on hover */
+    color: #d4af37 !important;  /* Pops gold for the text */
+    border-color: #1a1a1a;
+    transform: translateY(-2px); /* Subtle lift animation */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
