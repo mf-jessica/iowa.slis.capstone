@@ -55,6 +55,12 @@ $brand-color: #b38f4d;             // Slightly deeper gold for links and buttons
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+.bottom-nav-bar {
+  display: flex !important;       // Activates flexbox alignment engine
+  justify-content: flex-end !important; // Pushes content entirely to the right
+  gap: 12px;                      // Adds clean structural spacing between buttons
+}
+
 // 4. PAGE BANNER SIZE
 
 body:not(.home) .page-header {
