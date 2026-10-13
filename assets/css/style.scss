@@ -55,11 +55,41 @@ $brand-color: #b38f4d;             // Slightly deeper gold for links and buttons
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+/* BOTTOM NAV BAR */
+
 .bottom-nav-bar {
   display: flex !important;       // Activates flexbox alignment engine
   justify-content: flex-end !important; // Pushes content entirely to the right
   gap: 12px;                      // Adds clean structural spacing between buttons
 }
+
+.bottom-nav-bar a {
+    display: flex;
+    flex-direction: column;     
+    align-items: center;
+    text-align: center;         /* Centers multi-line text */
+    text-decoration: none;
+    
+    // Sizing fixes for uneven words
+    flex: 1 1 120px;            
+    max-width: 150px;           
+    padding: 12px 8px;
+    
+    color: #1a1a1a !important;   /* Matches charcoal text */
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: #f8f9fa;  /* Subtle grey background block */
+    border: 1px solid #e1e4e8;  /* Soft crisp border line */
+    border-radius: 6px;         /* Sleek modern rounded edges */
+    transition: all 0.2s ease-in-out;
+}
+
+.bottom-nav-bar a:hover {
+    background-color: #1a1a1a;  /* Switches background to rich black on hover */
+    color: #d4af37 !important;  /* Pops gold for the text */
+    border-color: #1a1a1a;
+    transform: translateY(-2px); /* Subtle lift animation */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 
 // 4. PAGE BANNER SIZE
 
