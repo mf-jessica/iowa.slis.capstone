@@ -54,3 +54,9 @@ $brand-color: #b38f4d;             // Slightly deeper gold for links and buttons
     transform: translateY(-2px); /* Subtle lift animation */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
+
+// 4. PAGE BANNER SIZE
+
+body:not(.home) .page-header {
+  padding: 2rem 2rem !important;
+}
