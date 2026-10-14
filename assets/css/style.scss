@@ -64,14 +64,18 @@ $brand-color: #b38f4d;             // Slightly deeper gold for links and buttons
 }
 
 .bottom-nav-bar a {  
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
     align-items: center;
-    text-align: center;         /* Centers multi-line text */
+    align-items: center;
+    text-align: center;         
     text-decoration: none;
     
-    // Sizing fixes for uneven words
-    flex: 1 1 120px;            
-    max-width: 150px;           
-    padding: 12px 8px;
+    // Sizing
+    flex: 1 1 80px;            
+    max-width: 100px;           
+    padding: 8px 6px;
     
     color: #1a1a1a !important;   /* Matches charcoal text */
     font-size: 0.9rem;
