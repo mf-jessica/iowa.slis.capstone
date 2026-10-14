@@ -63,9 +63,7 @@ $brand-color: #b38f4d;             // Slightly deeper gold for links and buttons
   gap: 12px;                      // Adds clean structural spacing between buttons
 }
 
-.bottom-nav-bar a {
-    display: flex;
-    flex-direction: column;     
+.bottom-nav-bar a {  
     align-items: center;
     text-align: center;         /* Centers multi-line text */
     text-decoration: none;
