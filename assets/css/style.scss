@@ -12,48 +12,103 @@ $brand-color: #b38f4d;             // Slightly deeper gold for links and buttons
 
 // 3. NAV BAR STYLE
 
- /* CENTERS AND STYLES THE NAVIGATION WRAPPER */
+/* Sidebar Container Setup */
 .portfolio-nav {
     display: flex;
-    flex-wrap: wrap;            /* Allows links to drop smoothly to a new line on smaller screens */
-    justify-content: center;    /* Centers the entire group horizontally */
-    align-items: stretch;       /* Ensures all link boxes are the exact same height */
-    gap: 12px;                  /* Clean, uniform spacing between items */
-    margin: 30px auto;          /* Generous spacing above and below the menu */
-    padding: 10px;
-    max-width: 1000px;          /* Matches standard modern site content widths */
+    flex-direction: column;     /* Stacks items vertically into a sidebar */
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 10px;
+    
+    /* Fixed Positioning inside Cayman's empty left margin space */
+    position: fixed;
+    top: 120px;                 /* Sits right below the header banner */
+    left: 20px;
+    z-index: 100;
+    width: auto;
 }
 
-/* MAKES EACH LINK LOOK LIKE A UNIFORM BUTTON */
-.portfolio-nav a {
+/* Base Styles for Navigation Items */
+.nav-item {
     display: flex;
-    flex-direction: column;     /* Stacks the numbers perfectly above the text */
-    justify-content: center;
     align-items: center;
-    text-align: center;         /* Centers multi-line text */
+    background-color: #b38f4d;  /* Default deeper gold brand color */
+    color: #111111;             /* Crisp off-black for high-contrast visibility */
+    border-radius: 6px;
     text-decoration: none;
-    
-    // Sizing fixes for uneven words
-    flex: 1 1 120px;            
-    max-width: 150px;           
-    padding: 12px 8px;
-    
-    color: #1a1a1a !important;   /* Matches charcoal text */
-    font-size: 0.9rem;
     font-weight: bold;
-    background-color: #f8f9fa;  /* Subtle grey background block */
-    border: 1px solid #e1e4e8;  /* Soft crisp border line */
-    border-radius: 6px;         /* Sleek modern rounded edges */
-    transition: all 0.2s ease-in-out;
+    height: 44px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    overflow: hidden;           /* Crucial: keeps collapsed text hidden */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.portfolio-nav a:hover {
-    background-color: #1a1a1a;  /* Switches background to rich black on hover */
-    color: #d4af37 !important;  /* Pops gold for the text */
-    border-color: #1a1a1a;
-    transform: translateY(-2px); /* Subtle lift animation */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+/* Home Icon Specific Box Sizing */
+.home-item {
+    width: 44px;
+    justify-content: center;
 }
+.home-item .icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* Number Circle Container Style */
+.nav-item .num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+    background-color: rgba(0, 0, 0, 0.08); /* Subtle backing contrast for the number */
+    flex-shrink: 0;
+}
+
+/* Text Element Hidden State */
+.nav-item .title {
+    max-width: 0;
+    opacity: 0;
+    white-space: nowrap;
+    padding: 0;
+    transition: max-width 0.3s ease, opacity 0.2s ease, padding 0.3s ease;
+}
+
+/* --- Expand Action Rule on Hover & Click/Focus --- */
+.nav-item:hover,
+.nav-item:focus-within {
+    background-color: #1a1a1a !important; /* Switches background to rich black */
+    color: #d4af37 !important;            /* Pops metallic gold for the text and number */
+}
+
+/* Dynamically changes the circle background to match rich black aesthetics on hover */
+.nav-item:hover .num,
+.nav-item:focus-within .num {
+    background-color: rgba(212, 175, 55, 0.15); /* Tinted gold backdrop inside black container */
+}
+
+/* Animates the width and reveals hidden title text smoothly */
+.nav-item:hover .title,
+.nav-item:focus-within .title {
+    max-width: 200px;         /* Expands large enough to fit the text content */
+    opacity: 1;
+    padding: 0 16px 0 12px;   /* Adds sleek side padding gaps when open */
+}
+
+/* Mobile Responsiveness Override */
+@media screen and (max-width: 64rem) {
+    .portfolio-nav {
+        position: relative;    /* Drops sidebar fallback into standard static flow on phones */
+        top: 0;
+        left: 0;
+        flex-direction: row;   /* Flips back into a horizontal row for mobile grids */
+        flex-wrap: wrap;
+        margin: 20px auto;
+        justify-content: center;
+    }
+}
+
 
 /* BOTTOM NAV BAR */
 
