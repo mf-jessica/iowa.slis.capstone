@@ -23,7 +23,7 @@ $brand-color: #b38f4d;             // Slightly deeper gold for links and buttons
     
     /* Fixed Positioning inside Cayman's empty left margin space */
     position: fixed;
-    top: 120px;                 /* Sits right below the header banner */
+    top: 10px;                 /* Sits right below the top of page */
     left: 20px;
     z-index: 100;
     width: auto;
@@ -33,8 +33,8 @@ $brand-color: #b38f4d;             // Slightly deeper gold for links and buttons
 .nav-item {
     display: flex;
     align-items: center;
-    background-color: #b38f4d;  /* Default deeper gold brand color */
-    color: #111111;             /* Crisp off-black for high-contrast visibility */
+    background-color: #111111; /* Crisp off-black for high-contrast visibility */
+    color: #b38f4d;            /* Default deeper gold brand color */ 
     border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
@@ -78,8 +78,8 @@ $brand-color: #b38f4d;             // Slightly deeper gold for links and buttons
 /* --- Expand Action Rule on Hover & Click/Focus --- */
 .nav-item:hover,
 .nav-item:focus-within {
-    background-color: #1a1a1a !important; /* Switches background to rich black */
-    color: #d4af37 !important;            /* Pops metallic gold for the text and number */
+    background-color: #d4af37 !important; /* Switches background to metallic gold */
+    color: #1a1a1a  !important;            /* Pops rich black for the text and number */
 }
 
 /* Dynamically changes the circle background to match rich black aesthetics on hover */
@@ -91,7 +91,7 @@ $brand-color: #b38f4d;             // Slightly deeper gold for links and buttons
 /* Animates the width and reveals hidden title text smoothly */
 .nav-item:hover .title,
 .nav-item:focus-within .title {
-    max-width: 200px;         /* Expands large enough to fit the text content */
+    max-width: auto;         /* Expands large enough to fit the text content */
     opacity: 1;
     padding: 0 16px 0 12px;   /* Adds sleek side padding gaps when open */
 }
