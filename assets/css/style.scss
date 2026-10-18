@@ -109,6 +109,36 @@ $brand-color: #b38f4d;             // Slightly deeper gold for links and buttons
     }
 }
 
+/* Center the header text relative to the content area, skipping the sidebar zone */
+.page-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;      /* Centers the text lines horizontally */
+    text-align: center;
+}
+
+/* Apply a left buffer zone on desktop screens to push text away from the left navbar */
+@media screen and (min-width: 64rem) {
+    .page-header {
+        padding-left: 90px !important;  /* Creates a safety wall so text can never slide behind the sidebar */
+        padding-right: 20px;            /* Balances out the layout spacing */
+    }
+    
+    .project-name, .project-tagline {
+        max-width: 800px;               /* Forces text to wrap cleanly instead of stretching infinitely */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Fallback to standard centering on mobile since the navbar moves down below */
+@media screen and (max-width: 64rem) {
+    .page-header {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}
 
 /* BOTTOM NAV BAR */
 
