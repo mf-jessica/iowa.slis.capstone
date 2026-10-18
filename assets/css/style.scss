@@ -23,7 +23,7 @@ $brand-color: #b38f4d;             // Slightly deeper gold for links and buttons
     
     /* Fixed Positioning inside Cayman's empty left margin space */
     position: fixed;
-    top: 10px;                 /* Sits right below the top of page */
+    top: 7px;                 /* Sits right below the top of page */
     left: 20px;
     z-index: 100;
     width: auto;
@@ -91,7 +91,7 @@ $brand-color: #b38f4d;             // Slightly deeper gold for links and buttons
 /* Animates the width and reveals hidden title text smoothly */
 .nav-item:hover .title,
 .nav-item:focus-within .title {
-    max-width: auto;         /* Expands large enough to fit the text content */
+    max-width: 400;         /* Expands large enough to fit the text content */
     opacity: 1;
     padding: 0 16px 0 12px;   /* Adds sleek side padding gaps when open */
 }
