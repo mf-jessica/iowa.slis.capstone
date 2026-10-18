@@ -18,13 +18,13 @@ $brand-color: #b38f4d;             // Slightly deeper gold for links and buttons
     flex-direction: column;     /* Stacks items vertically into a sidebar */
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 16px;
+    gap: 10px;
     padding: 20px 10px;
     
     /* Fixed Positioning inside Cayman's empty left margin space */
     position: fixed;
-    top: 5px;                 /* Sits right below the top of page */
-    left: 15px;
+    top: 3px;                 /* Sits right below the top of page */
+    left: 10px;
     z-index: 100;
     width: auto;
 }
@@ -91,9 +91,9 @@ $brand-color: #b38f4d;             // Slightly deeper gold for links and buttons
 /* Animates the width and reveals hidden title text smoothly */
 .nav-item:hover .title,
 .nav-item:focus-within .title {
-    max-width: 600;         /* Expands large enough to fit the text content */
+    max-width: 600px;         /* Expands large enough to fit the text content */
     opacity: 1;
-    padding: 0 16px 0 10px;   /* Adds sleek side padding gaps when open */
+    padding: 0 10px 0 10px;   /* Adds sleek side padding gaps when open */
 }
 
 /* Mobile Responsiveness Override */
