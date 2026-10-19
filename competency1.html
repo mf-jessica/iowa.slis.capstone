@@ -18,7 +18,13 @@ title: "Gateway Knowledge"
                 adobeDCView.previewFile({
                     content:{location: {url: "https://mf-jessica.github.io/iowa.slis.capstone/assets/competency1_worksample_mf_jessica.pdf"}},
                     metaData:{fileName: "competency1_worksample_mf_jessica.pdf"}
-                }, {embedMode: "SIZED_CONTAINER"});
+                }, {
+                    embedMode: "IN_LINE",
+                    showDownloadPDF: true,
+                    showPrintPDF: true,
+                    showLeftHandPanel: false, 
+                    showAnnotationTools: false
+                    });
                 
                 } catch(err) {
                 console.error(String(err))
